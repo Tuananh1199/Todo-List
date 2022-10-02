@@ -11,7 +11,7 @@ const InputComponent = styled.div`
         border-width: 1px;
         border-color: rgba(209, 213, 219);
         width: 100%;
-        box-sizing:border-box
+        box-sizing: border-box;
     }
 
     input, textarea:focus {
@@ -74,8 +74,8 @@ export function InputField(props) {
               placeholder={placeHolder}
               className="input-text"
               style={{ borderColor: error ? "rgba(239, 68, 68)" : "rgba(209, 213, 219)" }}
-              onBlur={() => {
-                let str = value;
+              onChange={(event) => {
+                let str = event.target.value;
                 str = str.trimStart();
                 if (required) {
                   if (!str) {
@@ -86,8 +86,6 @@ export function InputField(props) {
                     handleDisable(false)
                   }
                 }
-              }}
-              onChange={(event) => {
                 setValue(event.target.value)
                 handleChange(event.target.value, field);
               }}

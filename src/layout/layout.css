@@ -18,11 +18,13 @@
     grid-template-columns: 50% 50%;
     gap: 20px;
     padding: 35px;
-    height: 100vh;
+    height: 95vh;
 }
 
 .todo-list {
     background-color: rgb(255, 255, 255);
+    overflow: auto;
+    position: relative;
 }
 
 .btn-add {
