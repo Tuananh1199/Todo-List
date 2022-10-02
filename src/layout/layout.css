@@ -1,0 +1,40 @@
+.new-task {
+    background-color: rgb(255, 255, 255);
+    /* width: 50%; */
+}
+
+.title {
+    text-align: center;
+    padding: 15px;
+    color: rgba(31, 41, 55);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.container {
+    background-color: #e5e7eb;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    padding: 35px;
+    height: 100vh;
+}
+
+.todo-list {
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-add {
+    --tw-bg-opacity: 1;
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+    padding: 6px 25px;
+    font-size: 18px;
+    border: none
+}
+
+.btn-add:hover {
+    background-color: #059862;
+}
