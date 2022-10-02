@@ -95,9 +95,9 @@ export const TodoList = (props) => {
           return convertData.includes(convertKeySearch)
         })
       }
-      let dataSortDate = dataFilter.sort(function (a, b) {
+      let dataSortDate = dataFilter ? dataFilter.sort(function (a, b) {
         return new Date(a.dueDate) - new Date(b.dueDate);
-      })
+      }) : null;
       setTasks(dataSortDate)
     }
     fetchData();
