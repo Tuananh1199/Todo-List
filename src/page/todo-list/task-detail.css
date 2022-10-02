@@ -76,7 +76,7 @@
 
 .bulk-action {
   bottom: 0;
-  position: absolute;
+  position: sticky;
   background-color: rgb(120 113 108);
   box-sizing: border-box;
   display: flex;
@@ -89,3 +89,5 @@
   font-size: 18px;
   font-weight: 600;
 }
+
+@media (min-width: 768px) {}

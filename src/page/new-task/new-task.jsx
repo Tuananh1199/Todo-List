@@ -9,16 +9,25 @@ const NewTaskContainer = styled.div`
     .content {
       padding: 0px 30px;
       display: grid;
-      gap: 30px;
+      gap: 20px;
     }
-    .rows {
+    .rows{
       display: grid;
-      grid-template-columns: 47% 47%;
-      gap: 6%;
-      margin-bottom: 25px;
+      gap: 30px;
     }
     .note {
       font-weight: 600;
+    }
+    @media (min-width: 768px) {
+      .rows {
+        display: grid;
+        grid-template-columns: 47% 47%;
+        gap: 6%;
+        margin-bottom: 25px;
+      }
+      .content {
+        gap: 30px;
+      }
     }
 `
 const initValue = {
@@ -65,6 +74,7 @@ export const NewTask = (props) => {
       .then(
         success => {
           toast.success("Add new task successfully");
+          setTask(initValue);
           handleRefresh(refresh + 1);
         },
         error => {

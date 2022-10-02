@@ -12,13 +12,11 @@ const TodoListContainer = styled.div`
     .content {
       padding: 30px;
       display: grid;
-      gap: 30px;
+      gap: 20px;
     }
-    .rows {
+    .rows{
       display: grid;
-      grid-template-columns: 47% 47%;
-      gap: 6%;
-      margin-bottom: 25px;
+      gap: 30px;
     }
     .loading-page {
       display: flex;
@@ -31,6 +29,17 @@ const TodoListContainer = styled.div`
       display: grid;
       gap: 30px;
       overflow: auto;
+    }
+    @media (min-width: 768px) {
+      .content {
+        gap: 30px;
+      }
+      .rows {
+        display: grid;
+        grid-template-columns: 47% 47%;
+        gap: 6%;
+        margin-bottom: 25px;
+      }
     }
 `
 const removeTasks = (bulkAction) => {
@@ -148,7 +157,8 @@ export const TodoList = (props) => {
               .then(
                 (result) => {
                   toast.success("Remove task successfully");
-                  setRefresh(refresh + 1)
+                  setRefresh(refresh + 1);
+                  setBulkAction([]);
                 },
                 (error) => {
                   toast.error("Remove task failure");

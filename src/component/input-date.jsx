@@ -47,6 +47,7 @@ export const InputDueDate = (props) => {
   const { field, defaultValue, disabled, handleChange } = props;
   const [dueDate, setDueDate] = useState(defaultValue);
   const [error, setError] = useState(false);
+
   return (
     <InputComponent>
       <label htmlFor={field}>

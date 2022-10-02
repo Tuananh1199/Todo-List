@@ -1,42 +1,76 @@
 .new-task {
-    background-color: rgb(255, 255, 255);
-    /* width: 50%; */
+  background-color: rgb(255, 255, 255);
+  /* width: 50%; */
 }
 
 .title {
-    text-align: center;
-    padding: 15px;
-    color: rgba(31, 41, 55);
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  text-align: center;
+  padding: 15px;
+  color: rgba(31, 41, 55);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .container {
-    background-color: #e5e7eb;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    gap: 20px;
-    padding: 35px;
-    height: 95vh;
+  background-color: #e5e7eb;
+  display: grid;
+  gap: 20px;
+  padding: 35px;
 }
 
 .todo-list {
-    background-color: rgb(255, 255, 255);
-    overflow: auto;
-    position: relative;
+  background-color: rgb(255, 255, 255);
+  overflow: auto;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(209 213 219);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(156 163 175);
 }
 
 .btn-add {
+  --tw-bg-opacity: 1;
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+  padding: 6px 25px;
+  font-size: 18px;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.btn-add:hover {
+  background-color: #059862;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    height: 95vh;
+  }
+
+  .btn-add {
     --tw-bg-opacity: 1;
     background-color: #04AA6D;
     color: white;
     cursor: pointer;
     padding: 6px 25px;
     font-size: 18px;
-    border: none
-}
-
-.btn-add:hover {
-    background-color: #059862;
+    border: none;
+  }
 }
